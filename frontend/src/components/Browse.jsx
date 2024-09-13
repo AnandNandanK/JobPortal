@@ -1,5 +1,5 @@
 
-import Navbar from './ui/common/Navbar'
+import Navbar from './ui/Navbar'
 import React, { useEffect } from 'react'
 import AllJobs from './Job/AllJobs'
 import { useSelector,useDispatch } from 'react-redux'

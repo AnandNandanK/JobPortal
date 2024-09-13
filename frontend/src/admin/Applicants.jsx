@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import Navbar from '../components/ui/common/Navbar'
+import Navbar from '../components/ui/Navbar.jsx'
 import ApplicantsTable from './ApplicantsTable'
 import axios from 'axios'
 import { APPLICATION_API_END_POINT } from '../constant'

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import axios from 'axios'
 import {useDispatch} from 'react-redux'
-import {setAllJobs} from "../redux/jobSlice.js"
+import { setAllJobs } from '../redux/jobSlice.js'
 import { COMPANY_API_END_POINT } from '../constant';
 import { setAllCompany } from '../redux/companySlice.js';
 

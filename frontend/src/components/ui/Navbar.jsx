@@ -17,10 +17,10 @@ import { Button } from "@/components/ui/button"
 import { CgProfile } from "react-icons/cg";
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { USER_API_END_POINT } from '../../../constant';
+import { USER_API_END_POINT } from '../../constant.js';
 import { toast } from 'sonner';
 import axios from 'axios';
-import { setUser } from '../../../redux/authSlice';
+import { setUser } from '../../redux/authSlice.js';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { GiHamburgerMenu } from "react-icons/gi";

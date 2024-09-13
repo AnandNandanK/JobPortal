@@ -1,10 +1,9 @@
 import { useState } from 'react'
-import './App.css'
 import Home from './components/ui/Home'
-import LoginPage from './components/ui/LoginPage'
-import SignPage from './components/SignupPage'
+import LoginPage from './components/Auth/LoginPage'
+import SignPage from './components/Auth/SignupPage'
 import Jobs from './components/Jobs'
-import Profile from './profile'
+import Profile from './components/profile'
 import JobDescription from './components/JobDescription'
 
 import {

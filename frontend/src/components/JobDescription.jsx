@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Navbar from './ui/common/Navbar'
+import Navbar from './ui/Navbar.jsx';
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { useParams } from 'react-router-dom';

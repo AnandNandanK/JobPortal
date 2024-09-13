@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Navbar from '../components/ui/common/Navbar'
+import Navbar from '../components/ui/Navbar'
 import { Label } from "@/components/ui/label"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"

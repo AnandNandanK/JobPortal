@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Navbar from './common/Navbar';
+import Navbar from '../ui/Navbar';
 import axios from "axios";
 import { RadioGroup } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Link, useNavigate } from 'react-router-dom';
 import { Input } from "@/components/ui/input";
 import { toast } from 'sonner';
-import { USER_API_END_POINT } from "../../constant";
+import { USER_API_END_POINT } from "../../constant.js";
 import { useDispatch, useSelector } from 'react-redux';
 import { setUser, setLoading } from '../../redux/authSlice';
 import { Loader2 } from 'lucide-react';
@@ -72,7 +72,7 @@ export default function LoginPage() {
         <div>
             <Navbar />
             <div className='max-w-[1100px] flex items-center justify-center mx-auto overflow-y-hidden px-3'>
-                <form onSubmit={submitHandler} className='w-[90%] lg:1/2 border border-gray-200 rounded-md p-4 my-10'>
+                <form onSubmit={submitHandler} className='w-[90%] lg:w-1/2 md:w-1/2 border border-gray-200 rounded-md p-4 my-10'>
                     <h1 className='font-bold text-xl mb-5'>Login</h1>
 
                     <div className='flex flex-col gap-1 mt-2'>

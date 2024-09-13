@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import Navbar from './ui/common/Navbar';
+import Navbar from '../ui/Navbar.jsx';
 import axios from "axios";
 import { RadioGroup } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { Link, useNavigate } from 'react-router-dom';
-import {USER_API_END_POINT} from "../constant.js"
+import {USER_API_END_POINT} from "../../constant.js"
 import { toast } from 'sonner';
 import { Loader2 } from 'lucide-react';
-import { setLoading } from '../redux/authSlice.js';
+import { setLoading } from '../../redux/authSlice.js'; 
 import { Input } from "@/components/ui/input"
 
 import { useDispatch, useSelector } from 'react-redux';

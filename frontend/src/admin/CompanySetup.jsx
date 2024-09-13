@@ -106,7 +106,7 @@ export default function CompanySetup() {
     return (
         <div>
             <Navbar></Navbar>
-            <div className='max-w-xl mx-auto my-10'>
+            <div className='max-w-[1100px] mx-auto px-3 overflow-y-hidden'>
 
                 <form onSubmit={submitHandler}>
                     <div className='flex items-center gap-5 p-8'>

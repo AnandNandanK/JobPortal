@@ -77,7 +77,7 @@ export default function PostJobs() {
     return (
         <div>
             <Navbar />
-            <div className='max-w-[500px] flex justify-center items-center gap-6 my-5 mx-auto'>
+            <div className='max-w-[500px] flex justify-center items-center gap-6 my-5  mx-auto px-3 overflow-y-hidden'>
 
                 <form className='p-8 w-full border border-gray-200 shadow-lg rounded-md' onSubmit={submitHandler}>
                     <div className='grid grid-cols-2 gap-5'>

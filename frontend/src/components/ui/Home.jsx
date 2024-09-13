@@ -25,11 +25,10 @@ export default function Home() {
 
 
   useEffect(()=>{
-    // console.log('user role',user?.role)
     if (user?.role==="recruiter") {
       navigate("/admin/companies")
     }
-  })
+  },[])
 
 
   return (

@@ -47,7 +47,7 @@ export default function CreateCompany() {
   return (
     <div>
         <Navbar></Navbar>
-        <div className='max-w-[800px] mx-auto mt-5'>
+        <div className='max-w-[800px] mx-auto mt-5 px-3 overflow-y-hidden'>
             <div className='my-10'>
             <h1 className='font-bold text-2xl'>Your Company Name</h1>
             <p className='text-gray-500'>what would you like to give your company name? </p>

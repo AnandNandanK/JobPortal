@@ -24,7 +24,7 @@ export default function Companies() {
   },[input])
 
   return (
-    <div className='w-[1100px] mx-auto'>
+    <div className='max-w-[1100px] mx-auto px-3 overflow-y-hidden'>
       <Navbar />
 
       <div className='mt-5 flex justify-between items-center'>

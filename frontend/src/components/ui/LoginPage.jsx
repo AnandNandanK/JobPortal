@@ -59,7 +59,6 @@ export default function LoginPage() {
         };
     
 
-    
 
     useEffect(() => {
         if (user) {
@@ -70,10 +69,10 @@ export default function LoginPage() {
 
 
     return (
-        <div className='max-w-[1100px] mx-auto px-3 overflow-y-hidden'>
+        <div>
             <Navbar />
-            <div className='max-w-[1100px] flex items-center justify-center mx-auto'>
-                <form onSubmit={submitHandler} className='w-1/2 border border-gray-200 rounded-md p-4 my-10'>
+            <div className='max-w-[1100px] flex items-center justify-center mx-auto overflow-y-hidden px-3'>
+                <form onSubmit={submitHandler} className='w-[90%] lg:1/2 border border-gray-200 rounded-md p-4 my-10'>
                     <h1 className='font-bold text-xl mb-5'>Login</h1>
 
                     <div className='flex flex-col gap-1 mt-2'>

@@ -31,7 +31,7 @@ export default function CompaniesTable() {
 
 
     useEffect(()=>{
-        console.log("called UseEffect")
+        // console.log("called UseEffect")
         const filteredCompany=allCompany.filter((company)=>{
             if (!getCompanyByText) {
                 return true;

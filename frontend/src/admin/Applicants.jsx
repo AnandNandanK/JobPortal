@@ -40,7 +40,7 @@ export default function Applicants() {
   return (
     <div>
         <Navbar/>
-        <div className='max-w-[1100px] mx-auto my-5'>  
+        <div className='max-w-[1100px] mx-auto px-3 overflow-y-hidden'>  
             <h1 className='font-bold text-xl my-3'>Applicants ({applicants?.length})</h1>
             <ApplicantsTable/>
         </div>

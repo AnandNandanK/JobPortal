@@ -31,9 +31,10 @@ export default function Navbar() {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const [open, setOpen] = useState(false);
-    console.log(open)
+    // console.log(open)
 
     const { user } = useSelector((state) => state.auth);
+    // console.log(user.role)
     // console.log("user",user)
 
     const logoutHandler = async (e) => {
@@ -76,7 +77,6 @@ export default function Navbar() {
                                 <li><Link to="/Browse">Browse</Link></li>
                             </>)
                         }
-
 
                     </ul>
 
@@ -155,9 +155,16 @@ export default function Navbar() {
                         }
 
                         <ul className='flex flex-col font-semibold gap-1 pl-1'>
-                            <li><Link to="/">Home</Link></li>
-                            <li><Link to="/jobs">Jobs</Link></li>
-                            <li><Link to="/Browse">Browse</Link></li>
+                        {
+                            user?.role === "recruiter" ? (<>
+                                <li><Link to="/admin/companies">Companies</Link></li>
+                                <li><Link to="/admin/jobs">Jobs</Link></li>
+                            </>) : (<>
+                                <li><Link to="/">Home</Link></li>
+                                <li><Link to="/jobs">Jobs</Link></li>
+                                <li><Link to="/Browse">Browse</Link></li>
+                            </>)
+                        }
                             {
                                 user && <>
                                    

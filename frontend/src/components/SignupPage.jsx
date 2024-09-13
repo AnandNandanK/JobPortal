@@ -98,12 +98,11 @@ export default function SignupPage() {
         if (user) {
             navigate("/")
         };
-    }, []);
+    },[]);
 
     return (
         <div className='max-w-[1100px] mx-auto px-3 overflow-y-hidden'>
             <Navbar />
-
             <div className='lg:max-w-[1100px] flex items-center justify-center mx-auto'>
                 <form onSubmit={submitHandler} className='lg:w-[50%] border border-gray-200 rounded-md p-4 my-10'>
                     <h1 className='font-bold text-xl mb-5'>Sign Up</h1>

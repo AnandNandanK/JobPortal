@@ -72,7 +72,7 @@ export default function Jobs() {
           
           onClick={handleOverlayClick}
           className={`w-[20%]  ${openFilter ? "z-30 absolute left-3 top-1 right-0 bottom-0 md:block w-[40%] text-sm" : ("hidden md:block")} `}>
-          <FilterCard className="z-30" />
+          <FilterCard  />
         </motion.div>
 
 

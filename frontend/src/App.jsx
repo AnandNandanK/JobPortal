@@ -11,7 +11,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Browse from './components/Browse'
-import Companies from './admin/companies'
+import Companies from './admin/Companies'
 import CreateCompany from './admin/CreateCompany'
 import CompanySetup from './admin/CompanySetup'
 import AdminJobs from './admin/adminJobs'

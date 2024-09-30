@@ -18,11 +18,11 @@ export default function useGetAllAdminJobs() {
                     withCredentials:true
                 });
 
-                console.log('fetchAllAdminJobs',res);
-
                 if(res.data.success){
                     dispatch(setAllAdminJobs(res.data.jobs))
                 }
+                
+                console.log('fetchAllAdminJobs',res);
                 
             } catch (error) {
                 console.log(error)

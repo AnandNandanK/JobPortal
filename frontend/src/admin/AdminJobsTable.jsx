@@ -18,22 +18,17 @@ import {
 import { Ellipsis, Pencil } from 'lucide-react';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import useGetAllAdminJobs from '../hooks/useGetAllAdminJobs';
-import { setAllAdminJobs } from '../redux/jobSlice';
 import { Eye } from 'lucide-react';
 
 
-
-
 export default function AdminJobsTable() {
-        useGetAllAdminJobs();
-    const {allAdminJobs} = useSelector((store) => store.job);
-    const {searchJobByText} = useSelector((store) => store.job);
+    // useGetAllAdminJobs(); //no need to call here
+
+    const {allAdminJobs,searchJobByText} = useSelector((store) => store.job);
+
     console.log("allAdminJobs",allAdminJobs)
+
     const navigate=useNavigate()
-
-    // console.log("searchJobByText",searchJobByText)
-
 
     const [filterJob,setFilterJob]=useState(allAdminJobs);
 

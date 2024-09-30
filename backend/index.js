@@ -7,7 +7,7 @@ import dotenv from "dotenv";
 import companyRoute from './routes/companyRoutes.js'
 import jobRoutes from './routes/jobRoutes.js'
 import applicationRoute from './routes/applicationRoutes.js'
-// import path from "path"
+import path from "path"
 
 
 dotenv.config({});
@@ -25,16 +25,9 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
-// app.get('/', (req, res) => {
-//   res.status(200).json({
-//     message: "Home page fetched successfully",
-//   });
-// });
-
-// Connect to Database
 connectdb();
 
-// const _dirname=path.resolve();
+const _dirname=path.resolve();
 
 
 // APIs
@@ -44,10 +37,10 @@ app.use('/api/v1/job',jobRoutes);
 app.use('/api/v1/application',applicationRoute);
 
 
-// app.use(express.static(path.join(_dirname,"/frontend/dist")));
-// app.get("*",(req,res)=>{
-//   res.sendFile(path.resolve(_dirname,"frontend","dist","index.html"))
-// })
+app.use(express.static(path.join(_dirname,"/frontend/dist")));
+app.get("*",(req,res)=>{
+  res.sendFile(path.resolve(_dirname,"frontend","dist","index.html"))
+})
 
 
 // Start Server

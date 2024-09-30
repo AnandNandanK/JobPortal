@@ -9,7 +9,7 @@ import {
     TableHeader,
     TableRow,
 } from "@/components/ui/table"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+
 import {
     Popover,
     PopoverContent,
@@ -26,7 +26,7 @@ export default function AdminJobsTable() {
 
     const {allAdminJobs,searchJobByText} = useSelector((store) => store.job);
 
-    console.log("allAdminJobs",allAdminJobs)
+    console.log("All ADMIN JOBS.........",allAdminJobs)
 
     const navigate=useNavigate()
 

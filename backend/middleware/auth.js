@@ -25,17 +25,12 @@ export const isAuthenticated=async(req,res,next)=>{
         }
 
         console.log("Printing UserId from decoding it..",decode)
-
         req.id=decode.userId;
 
         next();
 
     } catch (error) {
-        console.log(error)
-        // return res.status(500).json({
-        //     message: "Internal Server Error",
-        //     success: false,
-        // });
+        console.log(error);
     }
 
 }

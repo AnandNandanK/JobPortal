@@ -29,7 +29,7 @@ export default function AdminJobsTable() {
         useGetAllAdminJobs();
     const {allAdminJobs} = useSelector((store) => store.job);
     const {searchJobByText} = useSelector((store) => store.job);
-    // console.log("allAdminJobs",allAdminJobs)
+    console.log("allAdminJobs",allAdminJobs)
     const navigate=useNavigate()
 
     // console.log("searchJobByText",searchJobByText)
@@ -50,10 +50,6 @@ export default function AdminJobsTable() {
 
 
     // console.log("filterJob",filterJob);
-
-
-
-
 
     // console.log("Filter Company",filterCompany);
     // console.log("getCompanyByText",getCompanyByText)
@@ -87,7 +83,7 @@ export default function AdminJobsTable() {
                                             <Popover>
                                                 <PopoverTrigger><Ellipsis /></PopoverTrigger>
                                                 <PopoverContent className="flex flex-col gap-3 w-40 "  > 
-                                                    <div className='flex gap-3 items-center hover:cursor-pointer' onClick={()=>navigate(`/admin/jobs/${e._id}`)}>
+                                                    <div className='flex gap-3 items-center hover:cursor-pointer' onClick={()=>navigate(`/admin/companies/${e._id}`)}>
                                                     <Pencil  className='w-4'/>
                                                     <span>Edit</span>
                                                     </div>

@@ -80,7 +80,7 @@ export default function LoginPage() {
                         <input
                             type='text'
                             placeholder='   Enter your email address'
-                            className='border rounded-sm h-10'
+                            className='border rounded-sm h-11 pl-3'
                             name='email'
                             value={inputFeild.email}
                             onChange={changeHandler}
@@ -92,7 +92,7 @@ export default function LoginPage() {
                         <input
                             type='password'
                             placeholder='    Enter your Password'
-                            className='border rounded-sm h-10'
+                            className='border rounded-sm h-11 pl-3'
                             name='password'
                             value={inputFeild.password}
                             onChange={changeHandler}

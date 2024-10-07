@@ -64,26 +64,37 @@ function App() {
     },
 
     {
+      path:"/admin/companies/:id",
+      element:<ProtectedRoute><CompanySetup/></ProtectedRoute>
+    },
+
+    {
       path:"/admin/companies/create",
       element:<ProtectedRoute><CreateCompany/></ProtectedRoute>
     },
     
+    
     {
-      path:"/admin/companies/:id",
+      path:"/admin/jobs/:id",
       element:<ProtectedRoute><CompanySetup/></ProtectedRoute>
     },
+
     {
       path:"/admin/jobs",
       element:<ProtectedRoute><AdminJobs/></ProtectedRoute>
     },
+
     {
       path:"/admin/job/create",
       element:<ProtectedRoute><PostJobs/></ProtectedRoute>
     },
+
     {
       path:"/admin/jobs/:id/applicants",
       element:<ProtectedRoute><Applicants/></ProtectedRoute>
     },
+
+
 
   ]);
   

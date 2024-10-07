@@ -6,6 +6,7 @@ import getDataUri from "../config/dataURI.js";
 import cloudinary from "../config/cloudinary.js"
 
 
+
 export const register = async (req, res) => {
     try {
         const { fullname, email, phoneNumber, password, role } = req.body;
@@ -80,6 +81,7 @@ export const login = async (req, res) => {
                 success: false
             });
         };
+
         let user = await User.findOne({ email });
         if (!user) {
             return res.status(400).json({
@@ -87,7 +89,9 @@ export const login = async (req, res) => {
                 success: false,
             })
         }
+
         const isPasswordMatch = await bcrypt.compare(password, user.password);
+
         if (!isPasswordMatch) {
             return res.status(400).json({
                 message: "Incorrect email or password.",
@@ -105,6 +109,8 @@ export const login = async (req, res) => {
         const tokenData = {
             userId: user._id
         }
+
+
         const token = await jwt.sign(tokenData, process.env.SECRET_KEY, { expiresIn: '1d' });
 
         user = {
@@ -181,6 +187,7 @@ export const updateProfile = async (req, res) => {
 
         console.log("FILE ",file)
         // updating data
+        
         if (fullname) user.fullname = fullname
         if (email) user.email = email
         if (phoneNumber) user.phoneNumber = phoneNumber

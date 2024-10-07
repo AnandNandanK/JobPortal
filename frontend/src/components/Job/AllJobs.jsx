@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Button } from "@/components/ui/button"
 import { FaRegBookmark } from "react-icons/fa6";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
@@ -8,9 +8,18 @@ import { useNavigate } from 'react-router-dom';
 
 export default function AllJobs({jobs}) {
 
+    const [readMore,setReadMore]=useState(false);
+    const description= readMore ?  jobs?.description : `${jobs?.description.substring(0,50)}...`; 
+
+    function readmoreHandler(){
+        setReadMore(!readMore);
+    }
+
 // console.log(jobs)
 
     const navigate = useNavigate();
+
+
     const daysAgofunction = (mongoDbtime) => { //mongoDB created At time
         const createdAt = new Date(mongoDbtime);
         const currentTime = new Date();
@@ -41,7 +50,11 @@ export default function AllJobs({jobs}) {
 
             <div className=''>
                 <h1 className='font-semibold text-lg my-2 '>{jobs?.title}</h1>
-                <p className='text-sm text-gray-600'>{jobs?.description}</p>
+                <p className='text-sm text-gray-600'>
+                    {description}
+                    <span onClick={readmoreHandler} className="text-blue-500 hover:cursor-pointer font-semibold"> {readMore ? "Show Less" : "Read More"} </span>
+
+                </p>
             </div>
             <div className='flex items-center gap-2 mt-4 '>
                 <Badge className="text-blue-700 font-bold text-center " variant="ghost">{jobs?.position} Position</Badge>
@@ -51,7 +64,7 @@ export default function AllJobs({jobs}) {
 
             <div className='flex items-center gap-4 mt-4'>
                 <Button className=" " variant="outline" onClick={() => navigate(`/description/${jobs?._id}`)}>Details</Button>
-                <Button className="bg-[#7209b7] text-white" >save For Leter</Button>
+                <Button className="bg-[#7209b7] text-white" >Save For Later</Button>
             </div>
         </div>
     )

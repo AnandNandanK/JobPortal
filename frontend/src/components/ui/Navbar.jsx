@@ -40,13 +40,16 @@ export default function Navbar() {
     const logoutHandler = async (e) => {
         try {
             console.log("clicked on LOGOUTHANDLER")
+            
             const res = await axios.get(`${USER_API_END_POINT}/logout`, { withCredentials: true })
+
             if (res.data.success) {
                 dispatch(setUser(null));
                 navigate('/');
                 toast.success(res.data.message);
             }
             console.log(res);
+
         } catch (error) {
             console.log(error)
             toast.error(error.response.data.message)

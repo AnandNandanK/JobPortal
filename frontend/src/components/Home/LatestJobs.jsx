@@ -7,6 +7,7 @@ export default function LatestJobs() {
 
   const {allJobs}=useSelector(store=>store.job)
   const dispatch = useDispatch();
+  
   // console.log("All Jobs",allJobs)
   
 //   useEffect(()=>{

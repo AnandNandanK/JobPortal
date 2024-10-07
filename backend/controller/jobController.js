@@ -2,6 +2,8 @@ import { set } from "mongoose";
 import { setLoading } from "../../frontend/src/redux/authSlice.js";
 import Job from "../models/jobmodel.js";
 
+
+
 export const postJob=async(req,res)=>{
     try {
         const  {title,description,requirements,salary,location,jobType,experience,position,companyId}=req.body;

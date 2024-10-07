@@ -2,6 +2,7 @@ import React from 'react'
 import { Badge } from "@/components/ui/badge"
 import { useNavigate } from 'react-router-dom'
 
+
 export default function LatestJobCards({job}) {
   const navigate=useNavigate();
 
@@ -18,7 +19,7 @@ export default function LatestJobCards({job}) {
             <h1 className='font-bold text-lg my-2 '>
                 {job.title}
             </h1>
-            <p className='text-sm text-gray-600 '>{job.description}</p>
+            <p className='text-sm text-gray-600 '>{`${job.description.substring(0,100)}...`}</p>
         </div>
 
         <div className='flex items-center gap-2 mt-4 '>

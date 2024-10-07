@@ -78,7 +78,7 @@ export default function Jobs() {
 
 
         {
-          filterJobs.length <= 0 ? <p className='text-center '>Jobs not Found</p> :
+          filterJobs?.length <= 0 ? <p className='text-center '>Jobs not Found</p> :
 
             <div className='flex-1 h-[88vh] overflow-y-auto pb-5 z-0'>
               <div className='grid lg:grid-cols-3 gap-4 sm:grid-cols-2 grid-cols-1 z-0'>

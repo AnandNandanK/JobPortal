@@ -8,15 +8,15 @@ import { setSearchQuery } from '../../redux/jobSlice';
 const filterData = [
   {
     filterType: "Location",
-    array: ["Delhi NCR", "Banglore", "Hydrabad", "Pune", "Mumbai"]
+    array: ["New Delhi", "Banglore", "Hydrabad", "Mumbai"]
   },
   {
     filterType: "Industry",
-    array: ["Frontend Developer", "Backend Developer", "FullStack", "Data Analyst"]
+    array: ["Frontend Developer", "Backend Developer", "FullStack", "DevOps"]
   },
   {
     filterType: "Salary",
-    array: ["10-20K", "20-60K", "60-1Lac", "1Lac to 5Lac", "Baki Tum Uss layak Nahi"]
+    array: ["10-20K", "20-60K", "60-1Lac", "1Lac to 5Lac"]
   }
 ];
 

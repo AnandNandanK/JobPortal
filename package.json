@@ -9,7 +9,7 @@
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "server": "cd backend && nodemon index.js",
     "client": "cd frontend && npm run dev",
-    "build": "npm install --prefix frontend && npm install --prefix backend"
+    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend"
   },
   "author": "",
   "license": "ISC",

@@ -8,7 +8,8 @@
     "start":"node backend/index.js",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "server": "cd backend && nodemon index.js",
-    "client": "cd frontend && npm run dev"
+    "client": "cd frontend && npm run dev",
+    "postinstall": "npm install --prefix frontend && npm install --prefix backend"
   },
   "author": "",
   "license": "ISC",

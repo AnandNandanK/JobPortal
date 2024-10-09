@@ -29,7 +29,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 app.get("/",(req,res)=>{
-  app.send("Server is up and running");
+  res.send("Server is up and running");
 })
 
 

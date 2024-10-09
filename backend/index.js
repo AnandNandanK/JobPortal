@@ -27,6 +27,9 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
+app.get("/",(req,res)=>{
+  app.send("Server is up and running");
+})
 
 
 // const _dirname=path.resolve();

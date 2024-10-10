@@ -39,6 +39,7 @@ export default function Navbar() {
 
     const logoutHandler = async (e) => {
         try {
+
             console.log("clicked on LOGOUTHANDLER")
             
             const res = await axios.get(`${USER_API_END_POINT}/logout`, { withCredentials: true })
@@ -48,6 +49,7 @@ export default function Navbar() {
                 navigate('/');
                 toast.success(res.data.message);
             }
+            
             console.log(res);
 
         } catch (error) {
